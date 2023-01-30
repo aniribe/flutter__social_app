@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:social_media_app_ui/ui/utils/ui_helpers.dart';
+import 'package:social_media_app_ui/ui/widgets/video_player/video_actions_section.dart';
+import 'package:social_media_app_ui/ui/widgets/video_player/video_caption.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../../consts/app_colors.dart';
@@ -69,34 +71,10 @@ class _CustomVideoPlayerState extends State<CustomVideoPlayer> {
                 ),
               )),
             ),
-            Align(
-              alignment: Alignment.bottomLeft,
-              child: Container(
-                height: 125,
-                width: screenWidth(context) * 0.75,
-                padding: const EdgeInsets.all(20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      '@${widget.post.user.userName}',
-                      style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                            color: AppColors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
-                    ),
-                    verticalSpace(5),
-                    Text(
-                      widget.post.caption,
-                      maxLines: 3,
-                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                            color: AppColors.white,
-                          ),
-                    )
-                  ],
-                ),
-              ),
-            ),
+            VideoCaption(
+                userName: widget.post.user.userName,
+                caption: widget.post.caption),
+            VideoActionsSection(controller: controller),
           ],
         ),
       ),
