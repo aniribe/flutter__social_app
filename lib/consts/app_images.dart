@@ -16,4 +16,8 @@ class AppImages {
   static const String video3 = 'assets/videos/video_3.mp4';
   static const String video4 = 'assets/videos/video_4.mp4';
   static const String video5 = 'assets/videos/video_5.mp4';
+  static const String video6 = 'assets/videos/video_6.mp4';
+  static const String video7 = 'assets/videos/video_7.mp4';
+  static const String video8 = 'assets/videos/video_8.mp4';
+  static const String video9 = 'assets/videos/video_9.mp4';
 }

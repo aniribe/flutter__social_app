@@ -86,18 +86,25 @@ class Lists {
         type: PostType.video,
         caption:
             'Finding adventure in the unknown and stepping out of my comfort zone',
-        assetPath: AppImages.video1),
+        assetPath: AppImages.video7),
     Post(
         id: '7',
         user: users[1],
         type: PostType.video,
         caption: 'Living life with no regrets, just unforgettable experiences',
-        assetPath: AppImages.video3),
+        assetPath: AppImages.video8),
     Post(
         id: '8',
         user: users[2],
         type: PostType.video,
         caption: 'Making memories that will last a lifetime',
-        assetPath: AppImages.video5),
+        assetPath: AppImages.video9),
+    Post(
+        id: '9',
+        user: users[4],
+        type: PostType.video,
+        caption:
+            'Finding adventure in the unknown and stepping out of my comfort zone',
+        assetPath: AppImages.video6),
   ];
 }

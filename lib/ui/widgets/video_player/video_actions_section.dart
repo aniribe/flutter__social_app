@@ -1,9 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:social_media_app_ui/ui/widgets/video_player/video_action_button.dart';
 import 'package:video_player/video_player.dart';
 
-import '../../../consts/app_colors.dart';
 import '../../utils/ui_helpers.dart';
 
 class VideoActionsSection extends StatelessWidget {
@@ -21,7 +19,7 @@ class VideoActionsSection extends StatelessWidget {
       child: Container(
         height: controller.value.size.height,
         width: screenWidth(context) * 0.2,
-        padding: EdgeInsets.only(bottom: 20),
+        padding: const EdgeInsets.only(bottom: 20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
