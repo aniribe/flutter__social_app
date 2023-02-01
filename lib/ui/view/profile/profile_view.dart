@@ -6,7 +6,9 @@ import 'package:social_media_app_ui/ui/view/profile/profile_viewmodel.dart';
 import 'package:stacked/stacked.dart';
 
 import '../../../consts/app_colors.dart';
+import '../../../models/user.dart';
 import 'components/user_info.dart';
+import 'components/user_info_section.dart';
 
 class ProfileView extends StackedView<ProfileViewModel> {
   const ProfileView({Key? key}) : super(key: key);
@@ -30,69 +32,13 @@ class ProfileView extends StackedView<ProfileViewModel> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Column(
-              children: [
-                CircleAvatar(
-                  radius: 50,
-                  backgroundColor: AppColors.white,
-                  backgroundImage:
-                      AssetImage(viewModel.user?.imagePath as String),
-                ),
-                verticalSpace(20),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 70),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      UserInfo(
-                        type: StringConsts.following,
-                        value: '${viewModel.user?.following}',
-                      ),
-                      UserInfo(
-                        type: StringConsts.followers,
-                        value: '${viewModel.user?.followers}',
-                      ),
-                      UserInfo(
-                        type: StringConsts.likes,
-                        value: '${viewModel.user?.likes}',
-                      ),
-                    ],
-                  ),
-                ),
-                verticalSpace(20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFFFF006E),
-                        fixedSize: Size(200, 50),
-                      ),
-                      child: Text(
-                        StringConsts.follow,
-                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                              color: Colors.grey.shade200,
-                              fontWeight: FontWeight.bold,
-                            ),
-                      ),
-                    ),
-                    horizontalSpace(15),
-                    ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: AppColors.white,
-                        fixedSize: const Size(50, 50),
-                      ),
-                      child: const Icon(
-                        Icons.arrow_drop_down,
-                        color: AppColors.black,
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
+            UserInfoSection(user: viewModel.user as User),
+            DefaultTabController(
+              length: 2,
+              child: Column(
+                children: [],
+              ),
+            )
           ],
         ),
       ),
