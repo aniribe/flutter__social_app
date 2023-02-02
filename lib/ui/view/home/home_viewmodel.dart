@@ -11,11 +11,14 @@ class HomeViewModel extends BaseViewModel {
   final _profileService = locator<ProfileService>();
 
   Future<void> onCaptionTapHandler(User user) async {
-    setChosenUserId(user);
+    setChosenUser(user);
+    getUserPosts();
     await redirectToProfile();
   }
 
-  void setChosenUserId(User user) => _profileService.setChosenUser(user);
+  void setChosenUser(User user) => _profileService.setChosenUser(user);
+
+  void getUserPosts() => _profileService.getUserPosts();
 
   Future<void> redirectToProfile() async =>
       await _navigationService.navigateTo(Routes.profileView);

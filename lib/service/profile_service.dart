@@ -6,12 +6,11 @@ import '../models/user.dart';
 
 @LazySingleton()
 class ProfileService {
-  // String? chosenUserId;
-
   User? chosenUser;
+  List<Post>? userPosts;
 
-  List<Post>? getUserPosts() {
-    return Lists.posts.where((post) => post.user == chosenUser).toList();
+  void getUserPosts() {
+    userPosts = Lists.posts.where((post) => post.user == chosenUser).toList();
   }
 
   void setChosenUser(User user) => chosenUser = user;

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../../consts/app_colors.dart';
-import '../../../../consts/string_consts.dart';
 import '../../../../models/user.dart';
 import '../../../utils/ui_helpers.dart';
 import 'account_info.dart';

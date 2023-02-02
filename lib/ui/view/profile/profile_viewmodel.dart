@@ -9,14 +9,12 @@ class ProfileViewModel extends BaseViewModel {
   final _profileService = locator<ProfileService>();
 
   User? get user => _profileService.chosenUser;
+  List<Post>? get userPosts => _profileService.userPosts;
 
-  List<Post>? userPosts;
+  // List<Post>? userPosts;
 
-  void onInit() {
-    initializeUserPosts();
-  }
-
-  void initializeUserPosts() {
-    userPosts = _profileService.getUserPosts();
-  }
+  // void onInit() {
+  //
+  //   notifyListeners();
+  // }
 }
