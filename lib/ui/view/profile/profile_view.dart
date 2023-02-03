@@ -64,7 +64,9 @@ class ProfileView extends StackedView<ProfileViewModel> {
                                   crossAxisCount: 3, childAspectRatio: 9 / 16),
                           itemBuilder: (context, index) {
                             return CustomVideoPlayerPreview(
-                                post: viewModel.userPosts?[index] as Post);
+                              post: viewModel.userPosts?[index] as Post,
+                              onDoubleTap: viewModel.onVideoDoubleTapHandler,
+                            );
                           },
                         ),
 

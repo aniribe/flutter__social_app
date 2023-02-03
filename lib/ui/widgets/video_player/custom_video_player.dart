@@ -67,7 +67,7 @@ class _CustomVideoPlayerState extends State<CustomVideoPlayer> {
           aspectRatio: controller.value.aspectRatio,
           child: Stack(
             children: [
-              VideoPlayer(controller),
+              Positioned.fill(child: VideoPlayer(controller)),
               Positioned.fill(
                 child: DecoratedBox(
                     decoration: BoxDecoration(

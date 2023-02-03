@@ -11,12 +11,12 @@ import '../../../models/user.dart';
 
 class CustomVideoPlayerPreview extends StatefulWidget {
   final Post post;
-  // final Future<void> Function(User) onCaptionTap;
+  final Future<void> Function(Post) onDoubleTap;
 
   const CustomVideoPlayerPreview({
     Key? key,
     required this.post,
-    // required this.onCaptionTap,
+    required this.onDoubleTap,
   }) : super(key: key);
 
   @override
@@ -54,7 +54,7 @@ class _CustomVideoPlayerPreviewState extends State<CustomVideoPlayerPreview> {
           }
         });
       },
-      onDoubleTap: ,
+      onDoubleTap: () => widget.onDoubleTap(widget.post),
       child: AspectRatio(
         aspectRatio: controller.value.aspectRatio,
         child: Stack(
