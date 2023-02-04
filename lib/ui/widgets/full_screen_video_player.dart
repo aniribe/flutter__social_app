@@ -7,23 +7,22 @@ import 'package:visibility_detector/visibility_detector.dart';
 import '../../../consts/app_colors.dart';
 import '../../../models/post.dart';
 import '../../../models/user.dart';
-import '../../utils/ui_helpers.dart';
 
-class CustomVideoPlayer extends StatefulWidget {
+class FullScreenVideoPlayer extends StatefulWidget {
   final Post post;
   final Future<void> Function(User) onCaptionTap;
 
-  const CustomVideoPlayer({
+  const FullScreenVideoPlayer({
     Key? key,
     required this.post,
     required this.onCaptionTap,
   }) : super(key: key);
 
   @override
-  State<CustomVideoPlayer> createState() => _CustomVideoPlayerState();
+  State<FullScreenVideoPlayer> createState() => _FullScreenVideoPlayerState();
 }
 
-class _CustomVideoPlayerState extends State<CustomVideoPlayer> {
+class _FullScreenVideoPlayerState extends State<FullScreenVideoPlayer> {
   late VideoPlayerController controller;
 
   @override
@@ -64,37 +63,34 @@ class _CustomVideoPlayerState extends State<CustomVideoPlayer> {
             }
           });
         },
-        child: AspectRatio(
-          aspectRatio: controller.value.aspectRatio,
-          child: Stack(
-            children: [
-              Positioned.fill(
-                child: VideoPlayer(controller),
-              ),
-              Positioned.fill(
-                child: DecoratedBox(
-                    decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [
-                      AppColors.black.withOpacity(0.8),
-                      Colors.transparent,
-                      Colors.transparent,
-                      AppColors.black,
-                    ],
-                    stops: const [0, 0.2, 0.8, 1],
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                  ),
-                )),
-              ),
-              VideoCaption(
-                userName: widget.post.user.userName,
-                caption: widget.post.caption,
-                onTap: () => widget.onCaptionTap(widget.post.user),
-              ),
-              VideoActionsSection(controller: controller),
-            ],
-          ),
+        child: Stack(
+          children: [
+            Positioned.fill(
+              child: VideoPlayer(controller),
+            ),
+            Positioned.fill(
+              child: DecoratedBox(
+                  decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    AppColors.black.withOpacity(0.8),
+                    Colors.transparent,
+                    Colors.transparent,
+                    AppColors.black,
+                  ],
+                  stops: const [0, 0.2, 0.8, 1],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                ),
+              )),
+            ),
+            VideoCaption(
+              userName: widget.post.user.userName,
+              caption: widget.post.caption,
+              onTap: () => widget.onCaptionTap(widget.post.user),
+            ),
+            VideoActionsSection(controller: controller),
+          ],
         ),
       ),
     );

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:social_media_app_ui/app/app.dart';
-import 'package:social_media_app_ui/consts/string_consts.dart';
 import 'package:social_media_app_ui/ui/utils/ui_helpers.dart';
 import 'package:social_media_app_ui/ui/view/profile/profile_viewmodel.dart';
 import 'package:social_media_app_ui/ui/widgets/video_player_preview/custom_video_player_preview.dart';
@@ -9,7 +7,6 @@ import 'package:stacked/stacked.dart';
 import '../../../consts/app_colors.dart';
 import '../../../models/post.dart';
 import '../../../models/user.dart';
-import 'components/user_info.dart';
 import 'components/user_info_section.dart';
 
 class ProfileView extends StackedView<ProfileViewModel> {
@@ -71,7 +68,7 @@ class ProfileView extends StackedView<ProfileViewModel> {
                         ),
 
                         //Second Tab
-                        Icon(Icons.favorite),
+                        const Icon(Icons.favorite),
                       ],
                     ),
                   ),

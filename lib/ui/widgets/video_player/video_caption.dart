@@ -29,7 +29,7 @@ class VideoCaption extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                '@$userName}',
+                '@$userName',
                 style: Theme.of(context).textTheme.titleSmall?.copyWith(
                       color: AppColors.white,
                       fontWeight: FontWeight.bold,
