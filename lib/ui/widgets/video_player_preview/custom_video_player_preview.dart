@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:social_media_app_ui/ui/utils/ui_helpers.dart';
-import 'package:social_media_app_ui/ui/widgets/video_player/video_actions_section.dart';
-import 'package:social_media_app_ui/ui/widgets/video_player/video_caption.dart';
 import 'package:video_player/video_player.dart';
-import 'package:visibility_detector/visibility_detector.dart';
 
 import '../../../consts/app_colors.dart';
 import '../../../models/post.dart';
-import '../../../models/user.dart';
 
 class CustomVideoPlayerPreview extends StatefulWidget {
   final Post post;
