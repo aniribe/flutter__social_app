@@ -4,4 +4,5 @@ class StringConsts {
   static const String followers = 'Followers';
   static const String likes = 'Likes';
   static const String follow = 'Follow';
+  static const String discover = 'Discover';
 }

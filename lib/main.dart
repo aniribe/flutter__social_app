@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Social App',
       theme: ThemeData(),
-      initialRoute: Routes.homeView,
+      initialRoute: Routes.generalView,
       onGenerateRoute: StackedRouter().onGenerateRoute,
       navigatorKey: StackedService.navigatorKey,
       navigatorObservers: [
