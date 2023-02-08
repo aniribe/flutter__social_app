@@ -1,16 +1,20 @@
-# flutter_social_app
+# Social app
 
-A new Flutter project.
+Four pages of the application were created - a feed with user posts, a Profile page, a page for viewing full-screen video and a user search page;.
 
-## Getting Started
+<img src="https://github.com/aniribe/flutter__social_app/blob/main/assets/images/app_screenshot.png" height=500px>
 
-This project is a starting point for a Flutter application.
+## Technologies used:
 
-A few resources to get you started if this is your first Flutter project:
+• Flutter
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+• Dart
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+## Packages used:
+
+• video_player
+• visibility_detector
+• flutter_staggered_grid_view
+• animations
