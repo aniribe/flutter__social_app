@@ -14,7 +14,7 @@ Four pages of the application were created - a feed with user posts, a Profile p
 
 ## Packages used:
 
-• video_player 
-• visibility_detector 
-• flutter_staggered_grid_view 
+• video_player
+• visibility_detector
+• flutter_staggered_grid_view
 • animations 
