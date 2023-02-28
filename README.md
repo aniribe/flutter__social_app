@@ -17,5 +17,8 @@ Four pages of the application were created - a feed with user posts, a Profile p
 • video_player
 
 • visibility_detector
+
 • flutter_staggered_grid_view
-• animations 
+
+• animations
+
